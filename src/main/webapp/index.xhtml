@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>JSF Application</title>
+    </h:head>
+    <h:body>
+    <h2>Employee List</h2>
+    	<h:dataTable value="#{employeeBean.employees}" var="e">
+    		<h:column>
+	    		<f:facet name="header">Code</f:facet>
+	    		<h:outputText value="#{e.employeeCode}"></h:outputText>
+    		</h:column>
+    		<h:column>
+	    		<f:facet name="header">Name</f:facet>
+	    		<h:outputText value="#{e.employeeName}"></h:outputText>
+    		</h:column>
+    		<h:column>
+	    		<f:facet name="header">Age</f:facet>
+	    		<h:outputText value="#{e.employeeAge}"></h:outputText>
+    		</h:column>
+    		<h:column>
+	    		<f:facet name="header">Dob</f:facet>
+	    		<h:outputText value="#{e.dateOfBirth}"></h:outputText>
+    		</h:column>
+    	</h:dataTable>
+	</h:body>
+</html>
